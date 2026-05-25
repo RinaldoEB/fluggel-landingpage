@@ -1,12 +1,701 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Fluggel</title>
-</head>
-<body>
-    <h1>Fluggel</h1>
-</body>
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LUMINA | Timeless Luxury Accessories</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#e9c349",
+              "on-background": "#e3e2e7",
+              "on-primary-fixed": "#1c1b1b",
+              "on-tertiary": "#313030",
+              "primary-fixed": "#e5e2e1",
+              "inverse-surface": "#e3e2e7",
+              "on-primary-container": "#7b7979",
+              "inverse-primary": "#5f5e5e",
+              "surface-container-high": "#292a2e",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#474646",
+              "on-secondary-fixed": "#241a00",
+              tertiary: "#c8c6c5",
+              "on-tertiary-fixed": "#1c1b1b",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-container": "#7a7979",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "primary-container": "#0a0a0a",
+              outline: "#8e9192",
+              "surface-container-highest": "#343539",
+              background: "#121317",
+              "on-tertiary-fixed-variant": "#474746",
+              "surface-variant": "#343539",
+              "on-secondary-container": "#342800",
+              "outline-variant": "#444748",
+              "secondary-container": "#af8d11",
+              "on-primary": "#313030",
+              "tertiary-fixed": "#e5e2e1",
+              secondary: "#e9c349",
+              "surface-bright": "#38393d",
+              surface: "#121317",
+              "surface-container": "#1e1f23",
+              "tertiary-container": "#0a0a0a",
+              primary: "#c9c6c5",
+              "on-secondary-fixed-variant": "#574500",
+              "on-surface-variant": "#c4c7c7",
+              "on-error": "#690005",
+              "surface-dim": "#121317",
+              "primary-fixed-dim": "#c9c6c5",
+              "surface-container-low": "#1a1b1f",
+              "surface-container-lowest": "#0d0e12",
+              error: "#ffb4ab",
+              "on-secondary": "#3c2f00",
+              "on-surface": "#e3e2e7",
+              "secondary-fixed": "#ffe088",
+              "surface-tint": "#c9c6c5",
+              "inverse-on-surface": "#2f3034",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-xl": "120px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "container-max": "1440px",
+              unit: "8px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "label-lg": ["Montserrat"],
+              "headline-md": ["Playfair Display"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "body-md": ["Montserrat"],
+              "label-sm": ["Montserrat"],
+              "display-lg": ["Playfair Display"],
+              "headline-lg": ["Playfair Display"],
+              "body-lg": ["Montserrat"],
+            },
+            fontSize: {
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                { lineHeight: "36px", letterSpacing: "0em", fontWeight: "500" },
+              ],
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "40px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "40px",
+                { lineHeight: "48px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="selection:bg-secondary selection:text-on-secondary">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav">
+      <div
+        class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full"
+      >
+        <div class="flex items-center gap-6">
+          <button
+            class="text-primary hover:text-secondary transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+        <a
+          class="font-headline-lg text-headline-lg tracking-widest text-primary hover:opacity-70 transition-opacity duration-200"
+          href="#"
+        >
+          LUMINA
+        </a>
+        <div class="flex items-center gap-6">
+          <button
+            class="hidden md:block text-on-surface hover:text-secondary transition-colors font-label-lg text-label-lg"
+          >
+            SEARCH
+          </button>
+          <button
+            class="text-primary hover:text-secondary transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined">shopping_bag</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Luxury Watch"
+            class="w-full h-full object-cover opacity-60 scale-105"
+            data-alt="A macro close-up of a high-end luxury mechanical watch with gold accents resting on a dark, textured obsidian surface. The lighting is cinematic and moody, using high-contrast shadows and sharp highlights to emphasize the metallic reflections and intricate craftsmanship. The background is a deep charcoal black, creating a focused, prestigious atmosphere typical of the Lumina brand. Fine dust motes catch a sliver of warm light, adding to the atmosphere of timeless elegance."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxtg9JFeeKX3YMcSGlyWyvSTuF0KfnEzlySdI9oQgIFiEQLdxt-g5TVqbEgX--7_Du82HkJwBmNwU06AMP_1mRWLdQ6ZC5jrzEqFVG0bj1S6cYH5EI0rTvGObwAtu0ogej2sEDZufq0asDrVbR3qIGOkF-OVOaOho0xNLd-imnQQYvX-khLtHLPkQEcShAjcfgipK9HOqIbfOno5owkK84hAYcK_OQkdhuPKwnDqRS9H-Msmw0xRaa_25Eo1tAZZYEoSd8oup3lpI"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background"
+          ></div>
+        </div>
+        <div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+          <span
+            class="font-label-lg text-label-lg text-secondary mb-6 block tracking-[0.3em] uppercase opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_forwards]"
+            >Est. 1924</span
+          >
+          <h1
+            class="font-display-lg text-[42px] md:text-display-lg text-on-background mb-8 leading-tight opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.3s_forwards]"
+          >
+            Timeless Elegance for the <br class="hidden md:block" />
+            Modern Individual
+          </h1>
+          <div
+            class="flex flex-col md:flex-row gap-6 justify-center items-center opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.6s_forwards]"
+          >
+            <button
+              class="bg-secondary text-on-secondary px-10 py-4 font-label-lg text-label-lg tracking-widest hover:bg-secondary-fixed-dim transition-all active:scale-95"
+            >
+              SHOP NOW
+            </button>
+            <button
+              class="border border-outline-variant/30 text-on-surface px-10 py-4 font-label-lg text-label-lg tracking-widest hover:border-secondary hover:text-secondary transition-all active:scale-95"
+            >
+              EXPLORE STORY
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Collections Bento Grid -->
+      <section
+        class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="text-center mb-20">
+          <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">
+            Curated Collections
+          </h2>
+          <div class="w-12 h-[1px] bg-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <!-- Watches -->
+          <div
+            class="md:col-span-8 group relative aspect-[16/9] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="Watches Collection"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="A minimalist overhead shot of three luxury wristwatches with varying metallic finishes in silver, gold, and matte black. The watches are arranged asymmetrically on a dark, slate-like surface that reflects soft, ambient studio lighting. The color palette is strictly monochrome with subtle gold highlights, evoking a sense of quiet confidence and premium quality. Shadow play across the watch faces adds depth and mystery to the composition."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTh9ifafp2ktrP_AJoMeGYaP08tdWpSxQ7cQlniVBd1SzCQETcqORUQzgDBzFHmyA4rF0rD2k7S7g7_UBho12iMLpVxJij2Rv-7Nsy3bm-h5NZAC-EgyY-UHQ_ibg8q-xLP-38IxNBaWumavz7PCNldhBA3wxWAwmZxwJhCl-gqEYfqfjQweL3FYjyr8Ky38VuVR6BSTdD_wcNRFB_tnH6Dtq-8ET3xJSWKDioA1M7oa8-rrWUWbOYla6h1A5hQE6AjZXcnpaFvDCW"
+            />
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"
+            ></div>
+            <div class="absolute bottom-10 left-10">
+              <p class="font-label-sm text-label-sm text-secondary mb-2">
+                PRECISION
+              </p>
+              <h3 class="font-headline-md text-headline-md text-white">
+                The Watch Atelier
+              </h3>
+            </div>
+          </div>
+          <!-- Jewelry -->
+          <div
+            class="md:col-span-4 group relative aspect-[4/5] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="Jewelry Collection"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="A stunning macro photograph of a diamond-encrusted gold ring resting inside a velvet-lined charcoal black box. The lighting is high-key and directional, creating a brilliant sparkle in the gemstones and a soft glow on the polished gold surfaces. The background is softly out of focus, emphasizing the fine detailing of the jewelry. The aesthetic is extremely luxurious and sophisticated, using a palette of deep charcoal and brilliant gold."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVxOGQX1gW7gD3qEJOjHg-X8GRllzSfqa04pG-h9Q0g5ES7ZwVs0nZBaIf5liaJIcxfzLT2LkmNpNHtykpxczf25WSzDyJaWTMJaLmqJjE0RMJ66160VEE7nmkQthf2vAwYkoyFjwr9S-8IX85E8VALeQXx8Yc6jknemzXnFLxQey_kSQZM3A8xR4RPXdA20lrmyJjCoOqliiah2ci9qwB3LWYJUW1YrUDyYkQ4GTIClho6WS9lIgN8rLyZ74dt0-TILJabZq573jV"
+            />
+            <div
+              class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"
+            ></div>
+            <div class="absolute bottom-10 left-10">
+              <p class="font-label-sm text-label-sm text-secondary mb-2">
+                RADIANCE
+              </p>
+              <h3 class="font-headline-md text-headline-md text-white">
+                Fine Jewelry
+              </h3>
+            </div>
+          </div>
+          <!-- Leather Goods -->
+          <div
+            class="md:col-span-12 group relative aspect-[21/9] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="Leather Goods"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="A collection of premium black leather accessories, including a wallet, a slim briefcase, and a belt, laid out on a dark, polished wood table. The lighting is low and moody, highlighting the natural grain and supple texture of the high-quality leather. The scene is accented by subtle gold hardware on the briefcase, providing a cinematic high-contrast look. The overall mood is professional, masculine, and intensely luxurious."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgGftw2-MeQF9CKXfOz-j5RxFABgdSqz-1PsrZgi-zx0ofifj4c7_oE1URWhZc-bbtwK6dJhxRXmAJ-SLAod74T8PUr6fAgL5ByLtLTCiJyAybWboPePeoW_TXvM_VepWo1liFsy9WJcPkd0INbqiYrnwDQGyKVyMwRvPENt-T3hBnKdLbM2Bz_J4m3t9-Dcs9dNOuViCxvL7ucvLiWsYYVC-cwxzXUXSiOq-N1NONMMNTLFUXVAj2PrcQW9skJ99xmXTAOFI25rW"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"
+            ></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center"
+            >
+              <p
+                class="font-label-sm text-label-sm text-secondary mb-2 tracking-widest"
+              >
+                TACTILE
+              </p>
+              <h3 class="font-headline-lg text-headline-lg text-white mb-6">
+                Master Leatherworks
+              </h3>
+              <span
+                class="font-label-lg text-label-lg text-white border-b border-white/40 pb-1 group-hover:border-secondary transition-colors"
+                >VIEW COLLECTION</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Craftsmanship Section -->
+      <section class="bg-surface-container-lowest py-stack-xl">
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+              <div class="relative aura-glow border border-white/5 p-4">
+                <img
+                  alt="Craftsman at work"
+                  class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                  data-alt="A close-up shot of an artisan's weathered hands carefully polishing a small, intricate gold component of a watch in a dimly lit workshop. Only the hands and the gold piece are illuminated by a warm, focused desk lamp, leaving the rest of the workspace in deep, velvety shadow. The atmosphere is one of intense focus and timeless craftsmanship, with dust motes illuminated in the single beam of light."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlXy40g0UMUxjhKWKE3V7mWF3VBAP-xF4eDQbat32rsgJwDqjSIam8UGqNR9ZbWMDwYZkFnS6780klMSteMLJ3YkxO1bhtzn6VhEKI9UvjzGql6iGILrCTPaQqEt6U0QWScBYF2ojTmUFO3PiifKFXaJK0UNLsjXxra0B-ZQb_LGmqdboy-dmR-pjC0FveI13UfGmESq12UfCfJDXjJmLq-S1vtvE5F869rnoZLjHa4Ied4LsSXFUxkjz1NUFIhY2QensIJcM02U9N"
+                />
+                <div
+                  class="absolute -bottom-6 -right-6 bg-secondary w-32 h-32 flex items-center justify-center text-on-secondary font-label-lg p-6 text-center leading-tight hidden md:flex"
+                >
+                  CRAFTED BY HAND
+                </div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <span
+                class="font-label-lg text-label-lg text-secondary tracking-widest block mb-6"
+                >THE ART OF MAKING</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-background mb-8"
+              >
+                Where Heritage Meets Precision
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed"
+              >
+                Each Lumina accessory is the result of hundreds of hours of
+                meticulous attention to detail. Our master artisans combine
+                century-old techniques with modern innovation to create pieces
+                that aren't just worn, but inherited.
+              </p>
+              <ul class="space-y-4 mb-10">
+                <li class="flex items-center gap-4">
+                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                  <span class="font-label-lg text-on-surface"
+                    >Ethically Sourced Precious Metals</span
+                  >
+                </li>
+                <li class="flex items-center gap-4">
+                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                  <span class="font-label-lg text-on-surface"
+                    >Precision Swiss Movement Engineering</span
+                  >
+                </li>
+                <li class="flex items-center gap-4">
+                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                  <span class="font-label-lg text-on-surface"
+                    >Hand-stitched Italian Leather</span
+                  >
+                </li>
+              </ul>
+              <button
+                class="font-label-lg text-label-lg text-primary border-b border-secondary pb-1 hover:text-secondary transition-colors"
+              >
+                OUR PHILOSOPHY
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Social Proof / Testimonials -->
+      <section class="py-stack-xl px-margin-mobile">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="flex justify-center mb-10 text-secondary">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >star</span
+            >
+          </div>
+          <blockquote
+            class="font-headline-md text-headline-md text-on-background italic mb-10 leading-relaxed"
+          >
+            "Lumina represents the pinnacle of quiet luxury. The weight of the
+            timepiece, the texture of the leather—everything speaks to a level
+            of quality that is increasingly rare in the modern world."
+          </blockquote>
+          <cite class="not-italic">
+            <p
+              class="font-label-lg text-label-lg text-secondary tracking-widest"
+            >
+              ALEXANDER VAUGHN
+            </p>
+            <p
+              class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1"
+            >
+              Creative Director, NYC
+            </p>
+          </cite>
+        </div>
+      </section>
+      <!-- Product Showcase Grid -->
+      <section
+        class="pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex justify-between items-end mb-12">
+          <h2 class="font-headline-lg text-headline-lg text-on-background">
+            Featured Pieces
+          </h2>
+          <a
+            class="font-label-lg text-label-lg text-secondary border-b border-secondary/30 pb-1 hover:border-secondary transition-all"
+            href="#"
+            >VIEW ALL</a
+          >
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+          <!-- Product Card -->
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Luxury Watch Model A"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A minimalist portrait of a sleek, all-black luxury wristwatch with a sapphire glass face. The product is shot against a dark, matte background with a single streak of cold light highlighting its curved edges. The design is modern, sharp, and embodies the Aura Noir aesthetic of deep blacks and silver accents. It appears prestigious and high-end."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQMzcHdnHmVj0GhZDg7CMS-29aNySVRx26jp5F8I53pKY8nbv65xVkghxProMU-C9IEmZlL3b-umeYL-JUh91c6FNYzVLdLBDqsE05Es05E0C0eR6O81o7EYufTmySWOXIBSyrJhEsrM5C0ufMkCFFBrLDQ7tjigZFih4lYeK6qiGB0qbSQcO4iRcxnxFMCxSuyCWhlLBGhIvl9BvtSOX4UCbDYQHC-JDWujuZEg0uIyTznT-imqK6_0SobkytzAAocq4ifPQooIPc"
+              />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-secondary/10 text-secondary px-3 py-1 font-label-sm text-[10px] rounded-full backdrop-blur-md"
+                  >LIMITED</span
+                >
+              </div>
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Nocturnal Chronograph
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              $2,450.00
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Gold Cufflinks"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A pair of intricately engraved 18k gold cufflinks resting on a dark silk fabric. The lighting is warm and soft, accentuating the fine engravings and the rich yellow hue of the gold. The setting is luxurious and formal, suggesting high-end evening wear. The aesthetic is refined and focuses on small but significant details of quality."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLpepkgrQLaP2jFfWZ0rXtgXRlRemaZ-r18ODPpI6WrbvlbVGPGFOrCMU48B8EWtfCCJcY57J-nW5b8r0cdMH-_Ppyojmt52OsqFqvzYdszFfDamT_n0eh8A6L7sqnbDddwsi8HBskm0WQIx7JAuilSkmviJP3cdouJHj7WYLqMTKZTCbwEzndNPwoq6WxNuj6WGwSNa2k4t7k9S7JHBHXlHf9cQTOB5tGvg7r7KWYnL_qpFD5ZK1zmbG9FHS5t3napZc2bKcFoNwi"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Engraved Heritage Cufflinks
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              $890.00
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Leather Wallet"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A slim, bi-fold black leather wallet made from exotic hide, displaying a unique pebble texture. The wallet is partially open, revealing a minimalist interior. The shot is taken in low-light, emphasizing the depth of the black color and the precision of the edge-stitching. The mood is sophisticated and exclusive."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4DDe8XNdVfYVoXMZb3QHnv2YjAU1oBVqswkKqadQH5aQPHAif3iO04pEdTTnOZ9qqxA3aprKMMGooq9WXISQic_lzFd59_q7jlt5TSXrYuoaC7QZfhl3jC37-eiwfnY2Z-rh4WjvrClGx5ctph2-KY1G2hlIOr__3zS9cvMrr1ost15AoVesiC2A2W0LDepinWVsrxBffsB8BBSAyibtqwP5Zt-oUbjz0UstB3vESGw3JJMmdgwztGuWjrXYJcjJWCbsErRfpLaPc"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Exotic Hide Slim Wallet
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              $420.00
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Signet Ring"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A bold, heavy silver signet ring with an onyx stone inlay, presented on a piece of dark volcanic rock. The contrast between the polished silver and the rough stone creates a masculine, powerful visual. The lighting is cinematic, casting long shadows and highlighting the geometric form of the ring. It perfectly captures a sense of mystery and strength."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBfe1X7oyocjc1aW7wjndSzwtzIOuctl7F2752UopWA5mVquJGl2JNB4DTUhSkoHlLKK83-ue9Q29-0lMGASXehxv-LS8-cC6E2qSbEvTK0O46CLuWUxTAhHir39jXPSe8q2iHzSQpCH1gchENPJMldtui3P4RzCstOrrunIb-O5XCp0zgzn2FDnUDSnJZpkeYDcQLOTQr3Lb1MA3m1s7E2xOvfsB2jcxRmbidwCRnLHOyJafPqTAac9k2a5M8LA2VAcsNdu-sohRD"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Onyx Signet Ring
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              $1,200.00
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-lowest text-primary py-stack-xl border-t border-outline-variant/10"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <a
+            class="font-headline-md text-headline-md text-primary block mb-6"
+            href="#"
+            >LUMINA</a
+          >
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-[200px]"
+          >
+            Crafting the artifacts of tomorrow, today.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">public</span></a
+            >
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">camera</span></a
+            >
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">mail</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h5
+            class="font-label-lg text-label-lg text-on-background mb-6 uppercase tracking-widest"
+          >
+            Collections
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Watches</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Fine Jewelry</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Leather Goods</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Limited Editions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="font-label-lg text-label-lg text-on-background mb-6 uppercase tracking-widest"
+          >
+            The Maison
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Craftsmanship</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Sustainability</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Heritage</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Store Locator</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="font-label-lg text-label-lg text-on-background mb-6 uppercase tracking-widest"
+          >
+            Newsletter
+          </h5>
+          <p class="font-label-sm text-label-sm text-on-surface-variant mb-6">
+            Join the inner circle for exclusive previews.
+          </p>
+          <form class="relative">
+            <input
+              class="w-full bg-transparent border-b border-outline-variant py-2 font-label-sm text-label-sm focus:border-secondary focus:ring-0 transition-colors placeholder:text-on-surface-variant/30"
+              placeholder="EMAIL ADDRESS"
+              type="email"
+            />
+            <button class="absolute right-0 top-2 text-secondary" type="submit">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant/5 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase"
+        >
+          © 2024 LUMINA ACCESSORIES. ALL RIGHTS RESERVED.
+        </p>
+        <div class="flex gap-8">
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant/60 hover:text-secondary transition-colors uppercase"
+            href="#"
+            >Privacy</a
+          >
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant/60 hover:text-secondary transition-colors uppercase"
+            href="#"
+            >Terms</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
