@@ -4,30 +4,22 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Flugel | Simplicity meet Beauty</title>
+    <title>Flugel | Crafted for the Free Spirit</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet" -->
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family= Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "secondary-fixed-dim": "#e9c349",
+              "secondary-fixed-dim": "#3a3a43",
               "on-background": "#e3e2e7",
               "on-primary-fixed": "#1c1b1b",
               "on-tertiary": "#313030",
@@ -38,7 +30,7 @@
               "surface-container-high": "#292a2e",
               "error-container": "#93000a",
               "on-primary-fixed-variant": "#474646",
-              "on-secondary-fixed": "#241a00",
+              "on-secondary-fixed": "#e3e2e7",
               tertiary: "#c8c6c5",
               "on-tertiary-fixed": "#1c1b1b",
               "on-error-container": "#ffdad6",
@@ -50,18 +42,18 @@
               background: "#121317",
               "on-tertiary-fixed-variant": "#474746",
               "surface-variant": "#343539",
-              "on-secondary-container": "#342800",
+              "on-secondary-container": "#c4c7c7",
               "outline-variant": "#444748",
-              "secondary-container": "#af8d11",
+              "secondary-container": "#2a2a32",
               "on-primary": "#313030",
               "tertiary-fixed": "#e5e2e1",
-              secondary: "#e9c349",
+              secondary: "#44444E",
               "surface-bright": "#38393d",
               surface: "#121317",
               "surface-container": "#1e1f23",
               "tertiary-container": "#0a0a0a",
               primary: "#c9c6c5",
-              "on-secondary-fixed-variant": "#574500",
+              "on-secondary-fixed-variant": "#c4c7c7",
               "on-surface-variant": "#c4c7c7",
               "on-error": "#690005",
               "surface-dim": "#121317",
@@ -69,9 +61,9 @@
               "surface-container-low": "#1a1b1f",
               "surface-container-lowest": "#0d0e12",
               error: "#ffb4ab",
-              "on-secondary": "#3c2f00",
+              "on-secondary": "#e3e2e7",
               "on-surface": "#e3e2e7",
-              "secondary-fixed": "#ffe088",
+              "secondary-fixed": "#5c5c68",
               "surface-tint": "#c9c6c5",
               "inverse-on-surface": "#2f3034",
             },
@@ -90,14 +82,14 @@
               gutter: "24px",
             },
             fontFamily: {
-              "label-lg": ["Montserrat"],
-              "headline-md": ["Playfair Display"],
-              "headline-lg-mobile": ["Playfair Display"],
-              "body-md": ["Montserrat"],
-              "label-sm": ["Montserrat"],
-              "display-lg": ["Playfair Display"],
-              "headline-lg": ["Playfair Display"],
-              "body-lg": ["Montserrat"],
+              "label-lg": ["Cinzel Decorative", "serif"],
+              "headline-md": ["Cinzel Decorative", "serif"],
+              "headline-lg-mobile": ["Cinzel Decorative", "serif"],
+              "body-md": ["Cinzel Decorative", "serif"],
+              "label-sm": ["Cinzel Decorative", "serif"],
+              "display-lg": ["Cinzel Decorative", "serif"],
+              "headline-lg": ["Cinzel Decorative", "serif"],
+              "body-lg": ["Cinzel Decorative", "serif"],
             },
             fontSize: {
               "label-lg": [
@@ -165,35 +157,17 @@
       <div
         class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full"
       >
-        <div class="flex items-center gap-6">
-          <button
-            class="text-primary hover:text-secondary transition-colors duration-300"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-        </div>
+        <div class="flex items-center gap-6"></div>
         <a
           class="font-headline-lg text-headline-lg tracking-widest text-primary hover:opacity-70 transition-opacity duration-200"
           href="#"
         >
-          FLUGEL
+          Flügel
         </a>
-        <div class="flex items-center gap-6">
-          <button
-            class="hidden md:block text-on-surface hover:text-secondary transition-colors font-label-lg text-label-lg"
-          >
-            SEARCH
-          </button>
-          <button
-            class="text-primary hover:text-secondary transition-colors duration-300"
-          >
-            <span class="material-symbols-outlined">shopping_bag</span>
-          </button>
-        </div>
+        <div class="flex items-center gap-6"></div>
       </div>
     </header>
     <main>
-
       <!-- Opening si paling ganteng -->
       <section
         class="relative h-screen flex items-center justify-center overflow-hidden"
@@ -214,25 +188,28 @@
             class="font-label-lg text-label-lg text-secondary mb-6 block tracking-[0.3em] uppercase opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_forwards]"
             >Est. 2025</span
           >
-          <h1 
+          <h1
             class="font-display-lg text-[42px] md:text-display-lg text-on-background mb-8 leading-tight opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.3s_forwards]"
           >
-            Si Ganteng <br class="hidden md:block" />
-            Ya pake Flugel
+            Crafted for the<br class="hidden md:block" />
+            Free Spirit
           </h1>
           <div
             class="flex flex-col md:flex-row gap-6 justify-center items-center opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.6s_forwards]"
           >
-            <button
+            <a
+              href="https://tr.ee/wWhkD4Mzxa"
+              target="_blank"
               class="bg-secondary text-on-secondary px-10 py-4 font-label-lg text-label-lg tracking-widest hover:bg-secondary-fixed-dim transition-all active:scale-95"
             >
               SHOP NOW
-            </button>
-            <button
+            </a>
+            <a 
+              href="#point"
               class="border border-outline-variant/30 text-on-surface px-10 py-4 font-label-lg text-label-lg tracking-widest hover:border-secondary hover:text-secondary transition-all active:scale-95"
             >
               EXPLORE PRODUCT
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -241,14 +218,13 @@
       <section
         class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
       >
-        <div class="text-center mb-20">
+        <div class="text-center mb-20" id="point">
           <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">
             Flugel Collections
           </h2>
           <div class="w-12 h-[1px] bg-secondary mx-auto"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-
           <!-- kotak kalung the angel -->
           <div
             class="md:col-span-8 group relative aspect-[16/9] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
@@ -264,10 +240,10 @@
             ></div>
             <div class="absolute bottom-10 left-10">
               <p class="font-label-sm text-label-sm text-secondary mb-2">
-               STYLE
+                STYLE
               </p>
               <h3 class="font-headline-md text-headline-md text-white">
-                The Angel 
+                The Angel
               </h3>
             </div>
           </div>
@@ -280,7 +256,8 @@
               alt="Flugel Collection"
               class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               data-alt="Kalung Merah"
-              src="Asset/kalung_merah.jpeg"/>
+              src="Asset/kalung_merah.jpeg"
+            />
             <div
               class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"
             ></div>
@@ -311,7 +288,9 @@
             <div
               class="absolute inset-0 flex flex-col items-center justify-center text-center"
             >
-              <p class="font-label-sm text-label-sm text-secondary mb-2 tracking-widest">
+              <p
+                class="font-label-sm text-label-sm text-secondary mb-2 tracking-widest"
+              >
                 TACTILE
               </p>
               <h3 class="font-headline-lg text-headline-lg text-white mb-6">
@@ -338,7 +317,7 @@
                   alt="Craftsman at work"
                   class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                   data-alt="A close-up shot of an artisan's weathered hands carefully polishing a small, intricate gold component of a watch in a dimly lit workshop. Only the hands and the gold piece are illuminated by a warm, focused desk lamp, leaving the rest of the workspace in deep, velvety shadow. The atmosphere is one of intense focus and timeless craftsmanship, with dust motes illuminated in the single beam of light."
-                  src="Asset/model_kalung.jpeg"
+                  src="Asset/kalung_salib_model.jpeg"
                 />
                 <div
                   class="absolute -bottom-6 -right-6 bg-secondary w-32 h-32 flex items-center justify-center text-on-secondary font-label-lg p-6 text-center leading-tight hidden md:flex"
@@ -365,31 +344,80 @@
                 century-old techniques with modern innovation to create pieces
                 that aren't just worn, but inherited.
               </p>
-              <ul class="space-y-4 mb-10">
-                <li class="flex items-center gap-4">
-                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
-                  <span class="font-label-lg text-on-surface"
-                    >-</span
-                  >
-                </li>
-                <li class="flex items-center gap-4">
-                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
-                  <span class="font-label-lg text-on-surface"
-                    >-</span
-                  >
-                </li>
-                <li class="flex items-center gap-4">
-                  <span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
-                  <span class="font-label-lg text-on-surface"
-                    >-</span
-                  >
-                </li>
-              </ul>
               <button
+                onclick="
+                  document
+                    .getElementById('philosophy-modal')
+                    .classList.remove('hidden')
+                "
                 class="font-label-lg text-label-lg text-primary border-b border-secondary pb-1 hover:text-secondary transition-colors"
               >
                 OUR PHILOSOPHY
               </button>
+              <!-- Philosophy Modal -->
+              <div
+                id="philosophy-modal"
+                class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10"
+              >
+                <!-- Overlay -->
+                <div
+                  onclick="
+                    document
+                      .getElementById('philosophy-modal')
+                      .classList.add('hidden')
+                  "
+                  class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                ></div>
+
+                <!-- Modal box -->
+                <div class="relative z-10 w-full max-w-4xl">
+                  <!-- Tombol X -->
+                  <button
+                    onclick="
+                      document
+                        .getElementById('philosophy-modal')
+                        .classList.add('hidden')
+                    "
+                    class="absolute top-2 right-2 z-20 w-8 h-8 flex items-center justify-center bg-black/60 text-white hover:bg-black transition-colors text-sm rounded-full"
+                  >
+                    ✕
+                  </button>
+
+                  <!-- Grid foto -->
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <div class="col-span-2 aspect-[16/9] overflow-hidden">
+                      <img
+                        src="Asset/cincin_tangan.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-[3/4] overflow-hidden">
+                      <img
+                        src="Asset/model_kalung_salib.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/kalung_model_2.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/model_kalung.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/kalung_model.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -451,7 +479,7 @@
       >
         <div class="flex justify-between items-end mb-12">
           <h2 class="font-headline-lg text-headline-lg text-on-background">
-            Flugel Featured 
+            Flugel Featured
           </h2>
           <a
             class="font-label-lg text-label-lg text-secondary border-b border-secondary/30 pb-1 hover:border-secondary transition-all"
@@ -460,7 +488,6 @@
           >
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-
           <!-- Produk flugel -->
           <div class="group cursor-pointer">
             <div
@@ -470,7 +497,8 @@
                 alt="CINCIN TIDAK ADA BATAS"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 data-alt="Infinity Cincin"
-                src="Asset/cincin_infinity.jpeg"/>
+                src="Asset/cincin_infinity.jpeg"
+              />
 
               <div class="absolute top-4 right-4">
                 <span
@@ -482,7 +510,7 @@
             <h4
               class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
             >
-                Infinity ring
+              Infinity ring
             </h4>
             <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
               Rp.
@@ -502,7 +530,7 @@
             <h4
               class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
             >
-               Heritage -
+              Heritage -
             </h4>
             <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
               Rp.
@@ -597,29 +625,33 @@
             <li>
               <a
                 class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
-                href="#"
-                >-</a
+                target="_blank"
+                href="https://www.instagram.com/flugel_id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >Instagram</a
               >
             </li>
             <li>
               <a
                 class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
-                href="#"
-                >-</a
+                target="_blank"
+                href="https://www.tiktok.com/@flugel_id?is_from_webapp=1&sender_device=pc"
+                >Tiktok</a
               >
             </li>
             <li>
               <a
                 class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
-                href="#"
-                >-</a
+                target="_blank"
+                href="https://shopee.co.id/flugel.id"
+                >Shopee</a
               >
             </li>
             <li>
               <a
                 class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
-                href="#"
-                >-</a
+                target="_blank"
+                href="https://shopee.co.id/flugel.id"
+                >Tokopedia  </a
               >
             </li>
           </ul>
@@ -660,7 +692,7 @@
               >
             </li>
           </ul>
-        </div>       
+        </div>
       </div>
       <div
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant/5 flex flex-col md:flex-row justify-between items-center gap-4"

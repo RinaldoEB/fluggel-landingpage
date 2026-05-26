@@ -41,3 +41,9 @@ style.innerHTML = `
             }
         `;
 document.head.appendChild(style);
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('philosophy-modal').classList.add('hidden');
+  }
+});
